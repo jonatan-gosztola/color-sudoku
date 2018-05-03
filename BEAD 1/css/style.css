@@ -1,0 +1,235 @@
+html,body {
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS';
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body, main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+body{
+    margin:0;
+    padding:0;
+    background-color: whitesmoke;
+    justify-content: flex-start;
+}
+
+main {
+    height: 100%;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+header {
+    width: 100vw;
+    height: 64px;
+    background-color: red;
+    border-bottom: 10px solid white;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+header h1 {
+    flex: 1;
+    text-align: center;
+}
+
+header i {
+    cursor: pointer;
+}
+
+#app-container {
+    min-height: 100vh;
+    margin: 0 auto;
+    max-width: 31.25em;
+    min-width: 18.75em;
+    padding: 1em;
+    padding-top:5em;
+    background-color: white;
+}
+
+section,
+footer {
+  width: 100vw;
+  max-width: calc(100vh - 264px);
+}
+
+
+
+/* TABLE */
+#section-table {
+    height: calc(100vh - 264px);
+    max-height: 100vw;
+}
+
+table {
+    border-spacing: 2px;
+    width: 100%;
+    height: 100%;
+}
+
+td.clickable {
+    padding: 10px;
+    margin: 10px;
+    border: 7px solid rgb(255, 255, 255); 
+    text-align:center;
+}
+
+table.size-4 td:nth-child(3) {
+    border-left: black 3px solid!important;
+} 
+table.size-4 td:nth-child(2){
+    border-right: black 3px solid!important;
+} 
+table.size-4 tr:nth-child(2)>td
+{
+    border-bottom:  black 3px solid!important;
+}
+table.size-4 tr:nth-child(3)>td{
+    border-top:  black 3px solid!important;
+}
+
+td {
+	width:  25%;
+	height: 25%;
+}
+
+/* FOOTER */
+#flex-footer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    bottom: -300px;
+    height: 20%;
+    background-color: rgb(196, 196, 196);
+    border-top: 5px red solid;
+}
+
+#flex-footer div {
+    margin: 2%;
+    width: 20%;
+    padding-top: 20%;
+    background-color: darkblue;
+}
+
+@-moz-document url-prefix() {
+    #flex-footer div {padding-top:60%;}
+}
+
+/* KEZDŐLAP */
+#home {
+    display: block;
+}
+
+h1, h2, h2 {
+    text-align: center;
+    margin: 12px;
+}
+
+#choseOptions {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    text-align: center;
+}
+
+.choseSize, .choseDifficult {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    width: 50%;
+}
+
+.col img {
+    width: 80%;
+    border: 5px solid white;
+    border-radius: 5px;
+}
+
+
+.col input {
+    display: none;
+}
+
+#choseOptions,#choseOptions>div, #choseOptions>div>div>div {
+    background-color: rgba(255, 0, 0, 0.5);
+    
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#startButton {
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    font-size: 2em;
+    background-color: red;
+    margin: 10px auto;
+    border-radius: 50px;
+    border: none;
+}
+
+#startButton:active {
+    border: 'none';
+}
+
+div.startButton {
+    text-align: center;
+}
+
+h3 {
+    margin: 5px auto;
+    font-weight: normal;
+}
+
+/* OVERLAY, WIN */
+
+#overlay {
+    display: none;
+    position: fixed;
+    cursor: pointer;
+    top:    0px;
+    bottom: 0px;
+    right:  0px;
+    left:   0px;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: rgba(0,0,0,0.7);
+}
+
+#win {
+    display: none;
+    z-index: 4;
+    width: 300px;
+    min-height: 300px;
+    position: absolute;
+    top: 50%;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    background-color: rgb(94, 131, 255);
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#win img {
+    width: 100%;
+}

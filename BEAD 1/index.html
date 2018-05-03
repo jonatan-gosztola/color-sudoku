@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <script src="js/sudokuView.js"></script>
+    <script src="js/sudokuModel.js"></script>
+    <script src="js/sudoku.js"></script>
+    <title>Szín sudoku</title>
+</head>
+<body>
+    <div id="overlay"></div>
+    <div id="win">
+        <h1>Gratulálok!</h1>
+        <img src="pic/success.gif" alt="">
+        <h1>Győztél!</h1>
+    </div>
+    
+    <header id="app-header">
+        <h1>Szín sudoku</h1>
+        <i class="material-icons">exit_to_app</i>
+    </header>
+    <main id="container">
+        <section id="home">
+            <div id="choseOptions">
+                <div class="row">
+                    <h2>Méret</h2>
+                    <div class="choseSize">
+                        <div class="col">
+                            <input type="radio" name="size" id="4x4" value="4" checked="checked">
+                            <h3>4 x 4</h3>
+                             <!-- ../BEAD1/ -->
+                            <img src="pic/44_preview.png" alt="4x4 előnézet">
+                        </div> <!-- col -->
+                        <div class="col">
+                            <input type="radio" name="size" id="3x3" value="3">
+                            <h3>3 x 3</h3>
+                            <img src="pic/33_preview.png" alt="3x3 előnézet">
+                        </div> <!-- col -->
+                    </div> <!-- choseSize -->
+                </div> <!-- row -->
+                <div class="row">
+                    <h2>Nehézség</h2>
+                    <div class="choseDifficult">
+                        <div class="col">
+                            <input type="radio" name="difficult" id="easy" value="0" checked="checked">
+                            <h3>Könnyű</h3>
+                            <img src="pic/33_easy.png" alt="3x3 könnyű" id="easy3">
+                            <img src="pic/44_easy.png" alt="4x4 könnyű" id="easy4">
+                        </div> <!-- .col -->
+                        <div class="col">
+                            <input type="radio" name="difficult" id="hard" value="1">
+                            <h3>Nehéz</h3>
+                            <img src="pic/33_hard.png" alt="3x3 nehéz" id="hard3">
+                            <img src="pic/44_hard.png" alt="4x4 könnyű" id="hard4">
+                        </div>  <!-- .col -->
+                    </div> <!-- .choseDifficult -->
+                </div> <!-- .row -->
+            </div> <!-- #choseOptions -->
+            <div class="startButton">
+                <input type="button" value="START" id="startButton">            
+            </div> <!-- #startButton -->
+        
+        </section>
+        <section id="section-table">
+            <table id="table">
+            </table>
+        </section> <!-- #section-table -->
+    
+        <footer id="flex-footer">
+            <div id="red"></div>
+            <div id="green"></div>
+            <div id="yellow"></div>
+            <div id="blue"></div>
+        </footer>
+    </main>
+</body>
+</html>
